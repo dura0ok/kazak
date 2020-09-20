@@ -32,7 +32,7 @@
         <li><a href="">Казачья молодежь</a></li>
         <li><a href="{{ route("contacts") }}">Контакты</a></li>
         <li><a href="/pages/statements.html">Донские Войсковые ведомости</a></li>
-        <li><a href="/pages/networks.html">Социальные сети</a></li>
+        <li><a href="{{ route("networks") }}">Социальные сети</a></li>
     </ul>
     <!-- End menu-->
     <!-- End sidebar-->

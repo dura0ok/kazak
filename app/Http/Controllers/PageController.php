@@ -17,4 +17,8 @@ class PageController extends Controller
     public function documents(){
         return view("pages.documents");
     }
+
+    public function networks(){
+        return view("pages.networks");
+    }
 }
