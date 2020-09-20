@@ -15,7 +15,28 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create(['name' => 'admin', 'email' => 'fenixrnd@mail.ru', 'password' => Hash::make('Test123321'), 'is_admin' => 1]);
-        $users = User::factory()->count(3)->create();
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@mail.ru',
+            'password' => Hash::make('admin123321'),
+            'is_admin' => 1
+            ]
+        );
+
+        User::create([
+                'name' => 'Стёпа',
+                'email' => 'fenixrnd@mail.ru',
+                'password' => Hash::make('Test123321'),
+                'is_admin' => 1
+            ]
+        );
+
+        User::create([
+                'name' => 'Владимир Владимирович',
+                'email' => 'rarykinv@mail.ru',
+                'password' => Hash::make('123321'),
+                'is_admin' => 1
+            ]
+        );
     }
 }
