@@ -1,11 +1,11 @@
 <?php
 
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IndexController;
-use App\Http\Controllers\Admin\IndexController as AdminIndexController;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\IndexController as AdminIndexController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", [IndexController::class, "index"])->name("index");
