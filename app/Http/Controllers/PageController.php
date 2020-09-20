@@ -21,4 +21,8 @@ class PageController extends Controller
     public function networks(){
         return view("pages.networks");
     }
+
+    public function statements(){
+        return view("pages.statements");
+    }
 }
