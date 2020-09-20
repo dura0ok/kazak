@@ -10,10 +10,10 @@
     <!-- End search-block -->
     <!-- Start menu-->
     <ul>
-        <li><a href="/">Главная</a></li>
+        <li><a href="{{ route('index') }}">Главная</a></li>
         <li><a href="">Новости</a></li>
         <li><a href="/pages/symbolic.html">Символика</a></li>
-        <li><a href="/pages/ataman.html">Атаман</a></li>
+        <li><a href="{{ route('ataman') }}">Атаман</a></li>
         <li><a href="" class="parent">Войско</a>
             <ul class="submenu">
                 <li><a href="/pages/structure.html"><span>›</span>Структура ГКО</a>
