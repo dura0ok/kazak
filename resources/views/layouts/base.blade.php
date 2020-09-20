@@ -30,6 +30,7 @@
     @include("layouts.parts.footer")
     <!-- End wrapper -->
 </div>
+<script src="{{ asset('js/app.js') }}"></script>
 @stack('scripts')
 </body>
 

@@ -30,7 +30,7 @@
         <li><a href="">Казак без веры - Не казак</a></li>
         <li><a href="">Казачество на Дону</a></li>
         <li><a href="">Казачья молодежь</a></li>
-        <li><a href="/pages/contacts.html">Контакты</a></li>
+        <li><a href="{{ route("contacts") }}">Контакты</a></li>
         <li><a href="/pages/statements.html">Донские Войсковые ведомости</a></li>
         <li><a href="/pages/networks.html">Социальные сети</a></li>
     </ul>

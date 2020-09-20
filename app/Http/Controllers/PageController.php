@@ -9,4 +9,8 @@ class PageController extends Controller
     public function ataman(){
         return view("pages.ataman");
     }
+
+    public function contacts(){
+        return view("pages.contacts");
+    }
 }

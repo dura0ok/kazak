@@ -10,4 +10,5 @@ Route::get("/", [IndexController::class, "index"])->name("index");
 // pages
 Route::prefix("pages")->group(function () {
     Route::get("ataman", [PageController::class, "ataman"])->name("ataman");
+    Route::get("contacts", [PageController::class, "contacts"])->name("contacts");
 });
