@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Start variables
+$yellow: #ffc600;
+$blue: #065196;
+// End variables
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    background: url("../images/cloud.png") repeat-x scroll center top rgba(0, 0, 0, 0);
+    //background: url("../images/goluboe_nebo.jpg") center;
+    height: 100vh;
+    width: auto;
+}
+
+.wrapper .container {
+    box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
+    padding: 10px;
+    width: 70%;
+    //height: 100%; // Вот это штука отвечает за этот фон контента надо как-то сделать адаптивно под контент
+    margin: 0 auto;
+
+    //header styles
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .info {
+            margin: 0 10px;
+            width: 60%;
+
+            .big,
+            .small {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .blue{
+                color: $blue;
+            }
+
+            .big {
+                font-size: 26px;
+                margin-bottom: 2.5%;
+            }
+
+            .small {
+                margin-bottom: 0.5%;
+                font-size: 16px;
+            }
+
+            p {
+                margin-top: 2%;
+                font-size: 18px;
+                color: #35393d;
+            }
+        }
+    }
+
+    //end header
+
+    // content
+    .content-wrapper {
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-between;
+
+        //sidebar
+        #sidebar {
+            width: 30%;
+            height: 100%;
+            background: white;
+
+            // search block
+            .search-block {
+                margin-bottom: 4%;
+
+                form {
+                    display: flex;
+                    flex-direction: row;
+
+                    input {
+                        width: 70%;
+                        background: none repeat scroll 0 0 #f4f6f7;
+                        border: 1px solid #e4e6e7;
+                        padding: 5px;
+                        box-shadow: inset 1px 2px 1px #949696;
+                    }
+
+                    button {
+                        background: none repeat scroll 0 0 $yellow;
+                        width: 30%;
+                        padding: 3px 12px;
+                        border-radius: 2px;
+                        border-bottom: 1px solid $yellow;
+                        border-top: 1px solid $yellow;
+                    }
+                }
+            }
+
+            // end search block
+
+            // start menu
+            ul {
+                border: 4px solid #e4e8eb;
+
+                li {
+                    padding: 15px;
+                    list-style: none;
+                    .submenu {
+                        display: none;
+                    }
+                    .submenu li a{
+                        vertical-align: bottom;
+                        span{
+                            font-size: 20px;
+                            //transform: rotate(90deg);
+                            display: inline-block;
+                        }
+                        font-size: 12px;
+                    }
+                    a {
+                        text-transform: uppercase;
+                        color: #191a1c;
+                        font-size: 16px;
+                        text-decoration: none;
+                        font-weight: 400;
+
+                    }
+                }
+            }
+
+            // end menu
+        }
+
+        // end sidebar
+
+        // start main content
+        #content {
+            margin-left: 1%;
+            width: 67%;
+            height: 100%;
+
+            .page_title {
+                font-size: 40px;
+                font-weight: lighter;
+                text-align: center;
+                text-decoration: underline;
+                //TODO сделать еще и overline
+                text-decoration-style: double;
+            }
+
+            // start slider
+            .slider {
+                width: 95%;
+                margin: 0 auto;
+                background-color: orange;
+                // position: relative;
+
+                // deleting arrows content
+                .slick-prev:before,
+                .slick-next:before {
+                    content: "";
+                }
+
+                // Slide start
+                .slide {
+                    width: 100%;
+                    position: relative;
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                    }
+
+                    //transparent slide info block start
+                    .slide_info {
+                        width: 40%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        position: absolute;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+
+                        h4 {
+                            margin: 5% 0;
+                            font-size: 20px;
+                            text-align: center;
+                            color: white;
+                            font-weight: bolder;
+                        }
+
+                        p {
+                            text-align: center;
+                            color: white;
+                            font-size: 14px;
+                            font-weight: lighter;
+                            margin-bottom: 4%;
+                        }
+
+                        .more {
+                            text-decoration: none;
+                            color: #6ccff7;
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+
+                    // Slide info end
+                }
+
+                // Slide end
+
+                // Arrows customization
+                .slick-prev,
+                .slick-next {
+                    height: 48px;
+                    width: 36px;
+                }
+
+                .slick-prev {
+                    left: 0;
+                    z-index: 1;
+                    background: url("../images/arrow-l.png") no-repeat scroll center center $yellow;
+                }
+
+                .slick-next {
+                    right: 40%;
+                    background: url("../images/arrow-r.png") no-repeat scroll center center $yellow;
+                }
+
+                // End arrows customization
+
+                // Dots customization
+                .slick-dots {
+                    bottom: 0;
+                    left: 20%;
+
+                    li {
+                        button {
+                            width: 24px;
+                            height: 6px;
+                            background: #ffffff;
+
+                            &:before {
+                                content: "";
+                            }
+                        }
+                    }
+
+                    .slick-active button {
+                        background: #b81b1b;
+                    }
+                }
+
+                // End dots customization
+            }
+
+            // End slider
+            // Start symbolic
+            .symbolic {
+                .symbol {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 5%;
+
+                    .emblem-wrapper {
+                        border: 3px solid #f6c600;
+                        width: 25%;
+                        margin: 0 auto;
+                        padding: 5px 35px;
+
+                        h3 {
+                            text-transform: uppercase;
+                            text-align: center;
+                            color: #3f428a;
+                            font-weight: bold;
+                        }
+                    }
+                    .symbol-img {
+                        margin-top: 1%;
+                        width: 50%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .symbol-content {
+                        margin-top: 5%;
+                        p {
+                            font-size: 16px;
+                            line-height: 18px;
+                            color: #1a1a19;
+                            margin: 2% 5%;
+                            a {
+                                color: #044f97;
+                            }
+                            span {
+                                color: #0e0e0e;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .download-wrapper {
+                        margin-top: 3%;
+                        margin-bottom: 5%;
+                        a {
+                            background: #e4e8eb;
+                            padding: 15px;
+                            color: #044f97;
+                        }
+                    }
+                }
+            }
+
+            // End symbolic
+            // Start ataman
+            .ataman_wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                #questionTitle {
+                    font-weight: lighter;
+                    font-size: 24px;
+                    margin-top: 5%;
+                    border: 2px solid black;
+                    padding: 5px;
+                    border-radius: 2px;
+                    text-align: center;
+                    width: 100%;
+                }
+                .ataman_info {
+                    border: 3px solid $yellow;
+                    border-radius: 20px;
+                    padding: 15px;
+                    h1 {
+                        text-align: center;
+                        font-weight: lighter;
+                        font-size: 40px;
+                        margin-bottom: 3%;
+                    }
+                    img {
+                        display: block;
+                        width: 75%;
+                        margin: 0 auto;
+                    }
+                    p {
+                        font-weight: 500;
+                        margin-top: 2%;
+                        line-height: 20px;
+                    }
+                }
+                // Start questions
+                .questions {
+                    margin: 5% 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .question {
+                        border-bottom: 5px dashed #d7dcdf;
+                        margin-bottom: 10%;
+                        .user_info {
+                            display: flex;
+                            span {
+                                background: #044f97;
+                                color: #fff;
+                                padding: 5px;
+                                margin-right: 5px;
+                            }
+                            h1 {
+                                font-size: 24px;
+                            }
+                        }
+                        .content {
+                            margin-top: 1.5%;
+                            border-bottom: 2px dashed #d7dcdf;
+                            padding-bottom: 20px;
+                            font-size: 16px;
+                            color: #1a1a19;
+                            font-weight: lighter;
+                        }
+                        .answer {
+                            .arrow {
+                                font-size: 24px;
+                            }
+                            .greeting {
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 20px;
+                            }
+                            .answer_content {
+                                margin-top: 2%;
+                                font-size: 16px;
+                                color: #1a1a19;
+                                font-weight: lighter;
+                            }
+                            .attachments {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                .attachment {
+                                    img {
+                                        max-width: 500px;
+                                        object-fit: contain;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // End questions
+            }
+            // End ataman
+            // Start contacts
+            .contacts {
+                .map {
+                    margin: 5% 0;
+                }
+                .contact {
+                    margin-top: 5%;
+                    h3 {
+                        margin-bottom: 2%;
+                    }
+                }
+            }
+            // End contacts
+            // Start statements(Ведомости) OR Documents Документы
+            .statements, .documents {
+                margin-left: 5%;
+                margin-top: 5%;
+                .state {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 50px;
+                    vertical-align: bottom;
+                    .btn-wrapper {
+                        .btn {
+                            span {
+                                font-size: 30px;
+                                //transform: rotate(90deg);
+                                display: inline-block;
+                            }
+                            display: block;
+                            font-size: 24px;
+                            text-decoration: none;
+                        }
+                    }
+                    .content {
+                        margin-top: 2%;
+                        padding-bottom: 2%;
+                        border-bottom: 1px dashed #d7dcdf;
+                        display: none;
+                        a {
+                            color: #065196;
+                            text-decoration: none;
+                            font-size: 20px;
+                        }
+                        p {
+                            margin-left: 0.2%;
+                        }
+                    }
+                }
+            }
+            // End statements, End Documents Документы
+            // Start networks
+            .networks {
+                margin-top: 3%;
+                li {
+                    margin-bottom: 1%;
+                    a {
+                        color: $blue;
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                }
+            }
+            // End networks
+            // Start structure
+            .structure{
+                height: 100vh;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            // End structure
+        }
+
+        // End main content
+    }
+    // End content wrapper
+}
+// Start footer
+footer {
+    background: #000000;
+    height: 50px;
+    width: 71.5%;
+    border-radius: 5px;
+    margin: 0 auto;
+    h1 {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+// End footer
+// End container
+
+.blockTitle {
+    text-align: center;
+    font-size: 30px;
+    margin: 5% 0;
+    border: 3px solid $yellow;
+    padding: 5px;
+}
