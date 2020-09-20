@@ -20,7 +20,7 @@
                 </li>
             </ul>
         </li>
-        <li><a href="/pages/documents.html">Документы</a></li>
+        <li><a href="{{ route("documents") }}">Документы</a></li>
         <li><a href="" class="parent">Казачий уклад</a>
             <ul class="submenu">
                 <li><a href="/pages/civil_service.html"><span>›</span>Государственная служба</a>

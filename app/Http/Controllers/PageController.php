@@ -13,4 +13,8 @@ class PageController extends Controller
     public function contacts(){
         return view("pages.contacts");
     }
+
+    public function documents(){
+        return view("pages.documents");
+    }
 }
