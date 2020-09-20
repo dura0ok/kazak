@@ -48,6 +48,10 @@ header .menu li a {
   align-items: center;
   flex-direction: column;
 }
+.admin_content_wrapper .login_form .error_block p {
+  color: red;
+  font-size: 20px;
+}
 .admin_content_wrapper .login_form h1 {
   color: #35393d;
   display: block;

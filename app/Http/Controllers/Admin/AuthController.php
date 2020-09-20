@@ -21,8 +21,8 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->route("admin");
+            return redirect()->route("admin.index");
         }
-        return Redirect::back()->with('message', 'Ошибка авторизации');
+        return Redirect::back()->withErrors(['Ошибка авторизации. Неверный логин или пароль!']);
     }
 }

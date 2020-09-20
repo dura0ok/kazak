@@ -61,6 +61,12 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        .error_block{
+            p{
+                color: red;
+                font-size: 20px;
+            }
+        }
 
         h1 {
             color: #35393d;
