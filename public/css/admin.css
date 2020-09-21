@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +42,45 @@ header .menu li a {
   margin-top: 1%;
 }
 
+.errors_wrapper ul li {
+  font-size: 20px;
+  color: red;
+}
+
+.admin_content_wrapper .section_name {
+  margin-top: 2%;
+  font-size: 20px;
+  color: #35393d;
+  text-align: center;
+}
+.admin_content_wrapper .creation_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.admin_content_wrapper .creation_form input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.admin_content_wrapper .creation_form textarea {
+  outline: none;
+  width: 50%;
+  height: 40vh;
+  border: 2px solid #35393d;
+  border-radius: 2px;
+  padding: 5px;
+}
+.admin_content_wrapper .creation_form label {
+  margin: 15px;
+  font-size: 16px;
+  color: #35393d;
+}
 .admin_content_wrapper .login_form {
   margin-top: 5%;
   display: flex;
@@ -64,4 +104,26 @@ header .menu li a {
   box-sizing: border-box;
   border: 2px solid black;
   border-radius: 5px;
+}
+.admin_content_wrapper .apanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin_content_wrapper .apanel li {
+  margin-top: 1%;
+  list-style: none;
+  border: 2px solid #eaaa02;
+  padding: 4px;
+  width: 50%;
+}
+.admin_content_wrapper .apanel li:before {
+  content: "\1F4CC   ";
+}
+.admin_content_wrapper .apanel li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0664B0;
+  font-size: 20px;
 }

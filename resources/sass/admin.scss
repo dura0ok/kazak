@@ -33,7 +33,7 @@ header {
     }
 }
 
-.green_btn{
+.green_btn {
     background-color: #4CAF50; /* Green */
     border: none;
     border-radius: 5px;
@@ -45,6 +45,13 @@ header {
     margin-top: 1%;
 }
 
+.errors_wrapper{
+    ul li{
+        font-size: 20px;
+        color: red;
+    }
+}
+
 .admin_content_wrapper {
     @mixin input-style($width: 25%) {
         width: $width;
@@ -54,6 +61,42 @@ header {
         border: 2px solid black;
         border-radius: 5px;
     }
+    // Naming section in apanel(center h1 text)
+    .section_name{
+        margin-top: 2%;
+        font-size: 20px;
+        color: #35393d;
+        text-align: center;
+    }
+
+    // Start edit, create form styles
+    .creation_form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+
+        input{
+            @include input-style(30%)
+        }
+        textarea{
+            outline: none;
+            width: 50%;
+            height: 40vh;
+            border: 2px solid #35393d;
+            border-radius: 2px;
+            padding: 5px;
+        }
+        label{
+            margin: 15px;
+            font-size: 16px;
+            color: #35393d;
+        }
+    }
+    // End edit, create form styles
+
+    // login styles
 
     .login_form {
         margin-top: 5%;
@@ -61,8 +104,9 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .error_block{
-            p{
+
+        .error_block {
+            p {
                 color: red;
                 font-size: 20px;
             }
@@ -74,9 +118,37 @@ header {
             margin-bottom: 3%;
         }
 
-    input {
-        @include input-style()
-    }
+        input {
+            @include input-style()
+        }
 
     }
+
+    // end login styles
+    // Apanel styles
+    .apanel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin-top: 1%;
+            list-style: none;
+            border: 2px solid rgb(234, 170, 2);
+            padding: 4px;
+            width: 50%;
+            &:before{
+                content: "📌 ";
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #0664B0;
+                font-size: 20px;
+            }
+        }
+    }
+
+    // End apanel styles
 }
