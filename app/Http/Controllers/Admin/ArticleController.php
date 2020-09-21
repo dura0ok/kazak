@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\AdditionalImage;
 use App\Models\Article;
 use Illuminate\Contracts\Foundation\Application;

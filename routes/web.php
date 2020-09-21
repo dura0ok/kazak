@@ -3,7 +3,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
