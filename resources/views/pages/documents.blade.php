@@ -1,4 +1,4 @@
-@extends("layouts.base")
+@extends("layouts.base.template")
 
 @section("content")
     <h1 class="page_title" style="text-decoration: none;">Документы</h1>

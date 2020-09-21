@@ -19,11 +19,12 @@ Route::prefix("pages")->group(function () {
     Route::get("statements", [PageController::class, "statements"])->name("statements");
 });
 
+// authentication routes
+Route::get("login", [AuthController::class, "getLoginPage"])->name("admin.login");
+Route::post("authenticate", [AuthController::class, "authenticate"])->name("admin.authenticate");
+
 // admin
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::get('/', [AdminIndexController::class, 'index'])->name('admin.index');
-    // authentication routes
-    Route::get("login", [AuthController::class, "getLoginPage"])->name("admin.login");
-    Route::post("authenticate", [AuthController::class, "authenticate"])->name("admin.authenticate");
 
 });

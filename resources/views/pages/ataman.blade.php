@@ -1,4 +1,4 @@
-@extends("layouts.base")
+@extends("layouts.base.template")
 
 @section("content")
     <main id="content">
