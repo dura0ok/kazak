@@ -2,6 +2,7 @@
 
 @section("content")
     <h1 class="section_name">Создать новость</h1>
+    <a href="{{ route('admin.index') }}" class="back_form_link">Вернуться в админку</a>
     <form action="{{ route('news.store') }}" method="POST" class="creation_form" enctype="multipart/form-data">
         @csrf
         @if($errors->any())

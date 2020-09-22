@@ -10,18 +10,18 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class ArticleController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return void
+     * @return Application|Factory|View
      */
     public function index()
     {
-        //
+        $news = Article::with('additionalImages')->get();
+        return view('admin.news.index', ['news' => $news]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller
             'name' => 'required|max:255',
             'text' => 'required',
             'mainImage' => 'required|mimes:jpg,jpeg,png,bmp',
-            'additionalImages' => 'required_if:mimes:jpg,jpeg,png,bmp',
+            'additionalImages.*' => 'nullable|mimes:jpg,jpeg,png,bmp',
             'date' => 'required|date|date_format:Y-m-d'
         ]);
         $article = new Article();
@@ -53,11 +53,7 @@ class ArticleController extends Controller
         $article->save();
         // additional images creating
         if($request->hasFile('additionalImages')) {
-            foreach($request->file('additionalImages') as $file) {
-                $path = $file->store('additionalImages', 'public');
-                $additional = new AdditionalImage(['name' => $path, 'article_id' => $article->id]);
-                $article->additionalImages()->save($additional);
-            }
+            $this->uploadAttachments($request, $article);
         }
         return Redirect::route('news.index');
     }
@@ -73,15 +69,11 @@ class ArticleController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return void
-     */
+
     public function edit(int $id)
     {
-        //
+        $article = Article::find($id);
+        return view('admin.news.edit', ['article' => $article]);
     }
 
     /**
@@ -89,21 +81,74 @@ class ArticleController extends Controller
      *
      * @param Request $request
      * @param int $id
-     * @return void
+     * @return RedirectResponse
      */
     public function update(Request $request, int $id)
     {
-        //
+        $request->validate([
+            'name' => 'nullable|max:255',
+            'mainImage' => 'nullable|mimes:jpg,jpeg,png,bmp',
+            'additionalImages.*' => 'nullable|mimes:jpg,jpeg,png,bmp',
+            'date' => 'nullable|date:date_format:Y-m-d'
+        ]);
+        $article = Article::find($id);
+        $article->fill($request->all());
+        if($request->has('mainImage')){
+            $this->deleteArticleImage($article);
+            $article->image = $request->file('mainImage')->store('newsImages', 'public');
+        }
+        $article->save();
+        if($request->has('additionalImages')){
+            $this->deleteAttachments($article);
+            AdditionalImage::where('article_id', $article->id)->delete();
+            $this->uploadAttachments($request, $article);
+        }
+        return Redirect::route('news.index');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
      * @param int $id
-     * @return void
+     * @return RedirectResponse
      */
     public function destroy(int $id)
     {
-        //
+        $article = Article::find($id);
+        // lets delete additional images
+        $this->deleteAttachments($article);
+        // delete main image
+        $this->deleteArticleImage($article);
+
+        Article::destroy($id);
+        return Redirect::back();
+    }
+
+    /**
+     * @param Article $article
+     */
+    private function deleteAttachments(Article $article): void{
+        $images = AdditionalImage::where('article_id', $article->id)->pluck('name');
+        foreach ($images as $image){
+            Storage::disk('public')->delete($image);
+        }
+    }
+
+    /**
+     * @param Article $article
+     */
+    private function deleteArticleImage(Article $article): void{
+        Storage::disk('public')->delete($article->image);
+    }
+
+    /**
+     * @param Request $request
+     * @param Article $article
+     */
+    public function uploadAttachments(Request $request, Article $article): void
+    {
+        foreach ($request->file('additionalImages') as $file) {
+            $path = $file->store('additionalImages', 'public');
+            $additional = new AdditionalImage(['name' => $path, 'article_id' => $article->id]);
+            $article->additionalImages()->save($additional);
+        }
     }
 }
