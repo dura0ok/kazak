@@ -14,7 +14,7 @@
         <input type="file" name="image" id="file">
         <label for="article">Выберите новость, если хотите привязать слайд к новости(кнопка подробнее)</label>
         <select name="article_id" id="article">
-            <option value="null" selected>Не привязывать</option>
+            <option value="none" selected>Не привязывать</option>
             @foreach($news as $article)
                 <option value="{{ $article->id }}">{{ $article->name }}</option>
             @endforeach
