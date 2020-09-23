@@ -20,6 +20,8 @@ Route::prefix("pages")->group(function () {
     Route::get("documents", [PageController::class, "documents"])->name("documents");
     Route::get("networks", [PageController::class, "networks"])->name("networks");
     Route::get("statements", [PageController::class, "statements"])->name("statements");
+    Route::get("news", [PageController::class, "news"])->name("news");
+    Route::get("article/{id}", [PageController::class, "article"])->name("article");
 });
 
 // authentication routes

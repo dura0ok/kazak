@@ -11,7 +11,7 @@
     <!-- Start menu-->
     <ul>
         <li><a href="{{ route('index') }}">Главная</a></li>
-        <li><a href="">Новости</a></li>
+        <li><a href="{{ route('news') }}">Новости</a></li>
         <li><a href="/pages/symbolic.html">Символика</a></li>
         <li><a href="{{ route('ataman') }}">Атаман</a></li>
         <li><a href="" class="parent">Войско</a>

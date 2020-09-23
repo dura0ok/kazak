@@ -1,9 +1,8 @@
-
-function openSubLinks(event){
+function openSubLinks(event) {
     event.preventDefault();
     var el = event.target
     var sub = document.querySelector(".submenu")
-    if(el.classList.contains("opened")){
+    if (el.classList.contains("opened")) {
         el.classList.remove("opened");
         sub.style.display = "none"
         return

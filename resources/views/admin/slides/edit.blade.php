@@ -3,7 +3,8 @@
 @section("content")
     <a href="{{ route('admin.index') }}" class="back_form_link">Вернуться в админку</a>
     <h1 class="section_name">Редактировать слайд</h1>
-    <form action="{{ route('slides.update', $slide) }}" class="creation_form" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('slides.update', $slide) }}" class="creation_form" method="POST"
+          enctype="multipart/form-data">
         @csrf
         {{ method_field('PUT') }}
         @include("layouts.admin.parts.errors_block")

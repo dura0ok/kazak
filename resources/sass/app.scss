@@ -20,6 +20,18 @@ body {
     width: auto;
 }
 
+.green_btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: 3% auto;
+}
+
 .wrapper .container {
     box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
     padding: 10px;
@@ -43,7 +55,7 @@ body {
                 text-transform: uppercase;
             }
 
-            .blue{
+            .blue {
                 color: $blue;
             }
 
@@ -115,18 +127,23 @@ body {
                 li {
                     padding: 15px;
                     list-style: none;
+
                     .submenu {
                         display: none;
                     }
-                    .submenu li a{
+
+                    .submenu li a {
                         vertical-align: bottom;
-                        span{
+
+                        span {
                             font-size: 20px;
                             //transform: rotate(90deg);
                             display: inline-block;
                         }
+
                         font-size: 12px;
                     }
+
                     a {
                         text-transform: uppercase;
                         color: #191a1c;
@@ -288,32 +305,40 @@ body {
                             font-weight: bold;
                         }
                     }
+
                     .symbol-img {
                         margin-top: 1%;
                         width: 50%;
+
                         img {
                             width: 100%;
                         }
                     }
+
                     .symbol-content {
                         margin-top: 5%;
+
                         p {
                             font-size: 16px;
                             line-height: 18px;
                             color: #1a1a19;
                             margin: 2% 5%;
+
                             a {
                                 color: #044f97;
                             }
+
                             span {
                                 color: #0e0e0e;
                                 font-size: 20px;
                             }
                         }
                     }
+
                     .download-wrapper {
                         margin-top: 3%;
                         margin-bottom: 5%;
+
                         a {
                             background: #e4e8eb;
                             padding: 15px;
@@ -331,6 +356,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 margin-top: 5%;
+
                 #questionTitle {
                     font-weight: lighter;
                     font-size: 24px;
@@ -341,48 +367,58 @@ body {
                     text-align: center;
                     width: 100%;
                 }
+
                 .ataman_info {
                     border: 3px solid $yellow;
                     border-radius: 20px;
                     padding: 15px;
+
                     h1 {
                         text-align: center;
                         font-weight: lighter;
                         font-size: 40px;
                         margin-bottom: 3%;
                     }
+
                     img {
                         display: block;
                         width: 75%;
                         margin: 0 auto;
                     }
+
                     p {
                         font-weight: 500;
                         margin-top: 2%;
                         line-height: 20px;
                     }
                 }
+
                 // Start questions
                 .questions {
                     margin: 5% 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+
                     .question {
                         border-bottom: 5px dashed #d7dcdf;
                         margin-bottom: 10%;
+
                         .user_info {
                             display: flex;
+
                             span {
                                 background: #044f97;
                                 color: #fff;
                                 padding: 5px;
                                 margin-right: 5px;
                             }
+
                             h1 {
                                 font-size: 24px;
                             }
                         }
+
                         .content {
                             margin-top: 1.5%;
                             border-bottom: 2px dashed #d7dcdf;
@@ -391,26 +427,31 @@ body {
                             color: #1a1a19;
                             font-weight: lighter;
                         }
+
                         .answer {
                             .arrow {
                                 font-size: 24px;
                             }
+
                             .greeting {
                                 text-align: center;
                                 font-weight: bold;
                                 font-size: 20px;
                             }
+
                             .answer_content {
                                 margin-top: 2%;
                                 font-size: 16px;
                                 color: #1a1a19;
                                 font-weight: lighter;
                             }
+
                             .attachments {
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: center;
+
                                 .attachment {
                                     img {
                                         max-width: 500px;
@@ -421,32 +462,39 @@ body {
                         }
                     }
                 }
+
                 // End questions
             }
+
             // End ataman
             // Start contacts
             .contacts {
                 .map {
                     margin: 5% 0;
                 }
+
                 .contact {
                     margin-top: 5%;
+
                     h3 {
                         margin-bottom: 2%;
                     }
                 }
             }
+
             // End contacts
             // Start statements(Ведомости) OR Documents Документы
             .statements, .documents {
                 margin-left: 5%;
                 margin-top: 5%;
+
                 .state {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     height: 50px;
                     vertical-align: bottom;
+
                     .btn-wrapper {
                         .btn {
                             span {
@@ -454,34 +502,41 @@ body {
                                 //transform: rotate(90deg);
                                 display: inline-block;
                             }
+
                             display: block;
                             font-size: 24px;
                             text-decoration: none;
                         }
                     }
+
                     .content {
                         margin-top: 2%;
                         padding-bottom: 2%;
                         border-bottom: 1px dashed #d7dcdf;
                         display: none;
+
                         a {
                             color: #065196;
                             text-decoration: none;
                             font-size: 20px;
                         }
+
                         p {
                             margin-left: 0.2%;
                         }
                     }
                 }
             }
+
             // End statements, End Documents Документы
             // Start networks
             .networks {
                 margin-top: 3%;
                 margin-left: 5%;
+
                 li {
                     margin-bottom: 1%;
+
                     a {
                         color: $blue;
                         font-size: 18px;
@@ -490,22 +545,82 @@ body {
                     }
                 }
             }
+
             // End networks
             // Start structure
-            .structure{
+            .structure {
                 height: 100vh;
-                iframe{
+
+                iframe {
                     width: 100%;
                     height: 100%;
                 }
             }
+
             // End structure
+            // Start news page
+            .article {
+                border: 1px solid #35393d;
+                width: 85%;
+                margin: 1%;
+
+                h1 {
+                    margin-top: 5%;
+                    margin-bottom: 2%;
+                    text-align: center;
+                    color: #35393d;
+                }
+
+                p {
+                    margin: 2%;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+                img {
+                    display: block;
+                    width: 95%;
+                    margin: 0 auto;
+                    object-fit: contain;
+                }
+
+                .attachments {
+                    h1 {
+                        text-align: center;
+                        color: #35393d;
+                    }
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .attachment {
+                        object-fit: contain;
+                        display: block;
+                        margin: 2% auto;
+                        width: 80%;
+                    }
+                }
+
+            }
+
+            .news {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            // End news page
         }
 
         // End main content
     }
+
     // End content wrapper
 }
+
 // Start footer
 footer {
     background: #000000;
@@ -513,6 +628,7 @@ footer {
     width: 71.5%;
     border-radius: 5px;
     margin: 0 auto;
+
     h1 {
         color: white;
         font-size: 24px;
@@ -520,6 +636,7 @@ footer {
         line-height: 50px;
     }
 }
+
 // End footer
 // End container
 

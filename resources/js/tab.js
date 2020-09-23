@@ -1,4 +1,5 @@
 let elements = document.getElementsByClassName("btn")
+
 function accord(event) {
     event.preventDefault();
     const el = event.target
@@ -15,6 +16,7 @@ function accord(event) {
     content.style.display = "block"
 
 }
+
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', accord);
 }
