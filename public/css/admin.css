@@ -251,6 +251,7 @@ header .menu li a {
   align-items: center;
 }
 .admin_content_wrapper .statements-container .statement {
+  margin-bottom: 3%;
   border: 3px solid #718096;
   padding: 50px;
 }

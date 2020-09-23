@@ -13,7 +13,6 @@ function accord(event) {
     }
     span.style.transform = 'rotate(90deg)'
     el.classList.add("opened");
-    content.style.display = "block"
 
 }
 

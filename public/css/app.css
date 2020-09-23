@@ -393,6 +393,10 @@ body {
 .wrapper .container .content-wrapper #content .statements .state .content p, .wrapper .container .content-wrapper #content .documents .state .content p {
   margin-left: 0.2%;
 }
+.wrapper .container .content-wrapper #content .statements .state .content.opened, .wrapper .container .content-wrapper #content .documents .state .content.opened {
+  display: block;
+  background-color: red;
+}
 .wrapper .container .content-wrapper #content .networks {
   margin-top: 3%;
   margin-left: 5%;

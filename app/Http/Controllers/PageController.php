@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Statement;
 
 class PageController extends Controller
 {
@@ -23,7 +24,8 @@ class PageController extends Controller
     }
 
     public function statements(){
-        return view("pages.statements");
+        $statements = Statement::all();
+        return view("pages.statements", ['statements' => $statements]);
     }
 
     public function news(){

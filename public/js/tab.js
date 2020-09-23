@@ -110,7 +110,6 @@ function accord(event) {
 
   span.style.transform = 'rotate(90deg)';
   el.classList.add("opened");
-  content.style.display = "block";
 }
 
 for (var i = 0; i < elements.length; i++) {
