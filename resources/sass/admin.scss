@@ -222,17 +222,47 @@ header {
                     margin: 2% auto;
                 }
             }
-            .buttons{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 1%;
-                button, a{
-                    margin-left: 2%;
-                    margin-right: 2%;
-                }
-            }
+
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1%;
+        button, a{
+            margin-left: 2%;
+            margin-right: 2%;
         }
     }
     // End news container styles
+    // Start slides container styles
+    .slides-container{
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .slide{
+            display: flex;
+            flex-direction: column;
+            h1{
+                text-align: center;
+                color: #35393d;
+                font-size: 30px;
+                margin: 3% 0;
+            }
+            p{
+                color: #2d3748;
+                margin-top: 2%;
+            }
+            .parent{
+                display: block;
+                margin: 2% auto;
+                color: #044f97;
+                text-decoration: none;
+            }
+        }
+    }
+    // End slides container styles
 }

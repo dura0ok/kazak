@@ -9,7 +9,7 @@
     <title>Admin</title>
 </head>
 <body>
-@include("layouts.admin.header")
+@include("layouts.admin.parts.header")
 <div class="admin_content_wrapper">
     @yield("content")
 </div>

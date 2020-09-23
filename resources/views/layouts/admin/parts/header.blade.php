@@ -5,6 +5,7 @@
         @endempty
         @isset($user)
         <li>Привет, {{ $user->name }}</li>
+                <li><a href="{{ route('admin.index') }}">Панель</a></li>
         <li><a href="">Выйти</a></li>
         @endisset
     </ul>

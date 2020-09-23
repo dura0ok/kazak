@@ -206,13 +206,40 @@ header .menu li a {
   display: block;
   margin: 2% auto;
 }
-.admin_content_wrapper .news-container .article .buttons {
+.admin_content_wrapper .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1%;
 }
-.admin_content_wrapper .news-container .article .buttons button, .admin_content_wrapper .news-container .article .buttons a {
+.admin_content_wrapper .buttons button, .admin_content_wrapper .buttons a {
   margin-left: 2%;
   margin-right: 2%;
+}
+.admin_content_wrapper .slides-container {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin_content_wrapper .slides-container .slide {
+  display: flex;
+  flex-direction: column;
+}
+.admin_content_wrapper .slides-container .slide h1 {
+  text-align: center;
+  color: #35393d;
+  font-size: 30px;
+  margin: 3% 0;
+}
+.admin_content_wrapper .slides-container .slide p {
+  color: #2d3748;
+  margin-top: 2%;
+}
+.admin_content_wrapper .slides-container .slide .parent {
+  display: block;
+  margin: 2% auto;
+  color: #044f97;
+  text-decoration: none;
 }

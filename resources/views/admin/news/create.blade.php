@@ -1,19 +1,11 @@
 @extends("layouts.admin.template")
 
 @section("content")
-    <h1 class="section_name">Создать новость</h1>
     <a href="{{ route('admin.index') }}" class="back_form_link">Вернуться в админку</a>
+    <h1 class="section_name">Создать новость</h1>
     <form action="{{ route('news.store') }}" method="POST" class="creation_form" enctype="multipart/form-data">
         @csrf
-        @if($errors->any())
-            <div class="errors_wrapper">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        @include("layouts.admin.parts.errors_block")
         <input type="text" name="name" placeholder="Название новости">
         <textarea name="text" placeholder="Введите свой текст"></textarea>
         <label for="mainImage">Вставьте файл главной картинки в поле ниже</label>
