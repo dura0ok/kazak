@@ -1,7 +1,6 @@
 @extends("layouts.base.template")
 
 @section("content")
-    <main id="content">
         <h1 class="page_title">Атаман</h1>
         <!-- Start ataman -->
         <!-- Start ataman wrapper -->
@@ -116,6 +115,5 @@
         </div>
         <!-- End ataman wrapper -->
         <!-- End ataman -->
-    </main>
 @endsection
 

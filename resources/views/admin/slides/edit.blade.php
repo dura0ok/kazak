@@ -24,6 +24,6 @@
                 @endif
             @endforeach
         </select>
-        <button class="green_btn">Создать слайд</button>
+        <button class="green_btn">Обновить слайд</button>
     </form>
 @endsection

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\SlideController;
+use App\Http\Controllers\Admin\StatementController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -30,4 +31,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::get('/', [AdminIndexController::class, 'index'])->name('admin.index');
     Route::resource('news', ArticleController::class);
     Route::resource('slides', SlideController::class);
+    Route::resource('statements', StatementController::class);
 });

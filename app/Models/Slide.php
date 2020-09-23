@@ -9,7 +9,7 @@ class Slide extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    public $fillable = ['title', 'description', 'article_id'];
+    protected $fillable = ['title', 'description', 'article_id'];
 
     public function article(){
         return $this->belongsTo('App\Article', 'id', 'article_id');

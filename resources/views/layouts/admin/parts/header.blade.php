@@ -4,9 +4,9 @@
             <li style="font-size: 24px;">Авторизация</li>
         @endempty
         @isset($user)
-        <li>Привет, {{ $user->name }}</li>
+                <li>Привет, {{ $user->name }}</li>
                 <li><a href="{{ route('admin.index') }}">Панель</a></li>
-        <li><a href="">Выйти</a></li>
+                <li><a href="">Выйти</a></li>
         @endisset
     </ul>
 </header>

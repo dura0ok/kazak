@@ -6,7 +6,7 @@
         <li><a href="{{ route('index') }}">Вернуться к сайту</a></li>
         <li><a href="{{ route('slides.index') }}">Управление слайдером</a></li>
         <li><a href="{{ route('news.index') }}">Управление новостями</a></li>
-        <li><a href="">Управление ведомостями</a></li>
+        <li><a href="{{ route('statements.index') }}">Управление ведомостями</a></li>
         <li><a href="">Управление документами</a></li>
         <li><a href="">Управление страницами</a></li>
     </ul>
