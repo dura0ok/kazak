@@ -1,21 +1,22 @@
-let elements = document.getElementsByClassName("btn")
 
-function accord(event) {
-    event.preventDefault();
-    const el = event.target
-    const content = document.querySelector(".content")
-    const span = el.firstChild
+function accord(event){
+    event.preventDefault(); let el = event.target
+    let dataID = event.target.getAttribute('data-id')
+    let content = document.querySelector(`.content[data-id="${dataID}"]`)
+    let state = document.querySelector(`.state[data-id="${dataID}"]`)
     if (el.classList.contains("opened")) {
         content.style.display = "none"
-        span.style.transform = 'rotate(0deg)'
-        el.classList.remove("opened");
+        el.querySelector('span').style.transform = 'rotate(0deg)'
+        state.style.marginBottom = "0"
+        el.classList.remove("opened")
         return
     }
-    span.style.transform = 'rotate(90deg)'
-    el.classList.add("opened");
-
+    el.querySelector('span').style.transform = 'rotate(90deg)'
+    el.classList.add("opened")
+    content.style.display = "block"
+    state.style.marginBottom = "5%"
 }
 
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', accord);
-}
+document.querySelectorAll(".btn").forEach(btn => {
+        btn.addEventListener("click", accord)
+});

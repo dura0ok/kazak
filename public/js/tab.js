@@ -93,28 +93,30 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var elements = document.getElementsByClassName("btn");
-
 function accord(event) {
   event.preventDefault();
   var el = event.target;
-  var content = document.querySelector(".content");
-  var span = el.firstChild;
+  var dataID = event.target.getAttribute('data-id');
+  var content = document.querySelector(".content[data-id=\"".concat(dataID, "\"]"));
+  var state = document.querySelector(".state[data-id=\"".concat(dataID, "\"]"));
 
   if (el.classList.contains("opened")) {
     content.style.display = "none";
-    span.style.transform = 'rotate(0deg)';
+    el.querySelector('span').style.transform = 'rotate(0deg)';
+    state.style.marginBottom = "0";
     el.classList.remove("opened");
     return;
   }
 
-  span.style.transform = 'rotate(90deg)';
+  el.querySelector('span').style.transform = 'rotate(90deg)';
   el.classList.add("opened");
+  content.style.display = "block";
+  state.style.marginBottom = "5%";
 }
 
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', accord);
-}
+document.querySelectorAll(".btn").forEach(function (btn) {
+  btn.addEventListener("click", accord);
+});
 
 /***/ }),
 
