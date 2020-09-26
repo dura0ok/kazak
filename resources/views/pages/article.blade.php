@@ -12,14 +12,14 @@
         <a href="" class="green_btn">Подробнее</a>
 
 
-    @if(!$article->additionalImages->isEmpty())
-        <div class="attachments">
-            <h1>Вложения(дополнительные картинки)</h1>
-            @foreach($article->additionalImages as $image)
-                <img src="{{ asset('storage/'.$image->name) }}" class="attachment" alt="{{ $article->name }}">
-            @endforeach
-        </div>
-    @endif
+        @if(!$article->additionalImages->isEmpty())
+            <div class="attachments">
+                <h1>Вложения(дополнительные картинки)</h1>
+                @foreach($article->additionalImages as $image)
+                    <img src="{{ asset('storage/'.$image->name) }}" class="attachment" alt="{{ $article->name }}">
+                @endforeach
+            </div>
+        @endif
     </div>
 @endsection
 

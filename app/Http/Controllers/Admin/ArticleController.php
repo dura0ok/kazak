@@ -52,7 +52,7 @@ class ArticleController extends Controller
         $article->image = $request->file('mainImage')->store('newsImages', 'public');
         $article->save();
         // additional images creating
-        if($request->hasFile('additionalImages')) {
+        if ($request->hasFile('additionalImages')) {
             $this->uploadAttachments($request, $article);
         }
         return Redirect::route('news.index');
@@ -93,12 +93,12 @@ class ArticleController extends Controller
         ]);
         $article = Article::find($id);
         $article->fill($request->all());
-        if($request->has('mainImage')){
+        if ($request->has('mainImage')) {
             $this->deleteArticleImage($article);
             $article->image = $request->file('mainImage')->store('newsImages', 'public');
         }
         $article->save();
-        if($request->has('additionalImages')){
+        if ($request->has('additionalImages')) {
             $this->deleteAttachments($article);
             AdditionalImage::where('article_id', $article->id)->delete();
             $this->uploadAttachments($request, $article);
@@ -125,9 +125,10 @@ class ArticleController extends Controller
     /**
      * @param Article $article
      */
-    private function deleteAttachments(Article $article): void{
+    private function deleteAttachments(Article $article): void
+    {
         $images = AdditionalImage::where('article_id', $article->id)->pluck('name');
-        foreach ($images as $image){
+        foreach ($images as $image) {
             Storage::disk('public')->delete($image);
         }
     }
@@ -135,7 +136,8 @@ class ArticleController extends Controller
     /**
      * @param Article $article
      */
-    private function deleteArticleImage(Article $article): void{
+    private function deleteArticleImage(Article $article): void
+    {
         Storage::disk('public')->delete($article->image);
     }
 

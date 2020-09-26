@@ -8,15 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Slide extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
     protected $fillable = ['title', 'description', 'article_id'];
 
-    public function article(){
+    public function article()
+    {
         return $this->belongsTo('App\Article', 'id', 'article_id');
     }
 
-    public function setArticleIdAttribute($value){
-        if ($value == 'none'){
+    public function setArticleIdAttribute($value)
+    {
+        if ($value == 'none') {
             $this->attributes['article_id'] = null;
             return;
         }

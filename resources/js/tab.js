@@ -1,6 +1,6 @@
-
-function accord(event){
-    event.preventDefault(); let el = event.target
+function accord(event) {
+    event.preventDefault();
+    let el = event.target
     let dataID = event.target.getAttribute('data-id')
     let content = document.querySelector(`.content[data-id="${dataID}"]`)
     let state = document.querySelector(`.state[data-id="${dataID}"]`)
@@ -18,5 +18,5 @@ function accord(event){
 }
 
 document.querySelectorAll(".btn").forEach(btn => {
-        btn.addEventListener("click", accord)
+    btn.addEventListener("click", accord)
 });

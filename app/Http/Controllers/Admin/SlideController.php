@@ -49,7 +49,7 @@ class SlideController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Slide  $slide
+     * @param \App\Models\Slide $slide
      * @return Response
      */
     public function show(Slide $slide)
@@ -71,7 +71,7 @@ class SlideController extends Controller
     public function update(Request $request, Slide $slide)
     {
         $slide->fill($request->all());
-        if ($request->has('image')){
+        if ($request->has('image')) {
             $this->deleteSlideImage($slide);
             $slide->image = $request->file('image')->store('slides', 'public');
         }
@@ -79,7 +79,8 @@ class SlideController extends Controller
         return Redirect::route('slides.index');
     }
 
-    private function deleteSlideImage(Slide $slide){
+    private function deleteSlideImage(Slide $slide)
+    {
         Storage::disk('public')->delete($slide->image);
     }
 

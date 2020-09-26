@@ -2,6 +2,8 @@
 
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DocumentCategoryController;
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\SlideController;
@@ -34,4 +36,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::resource('news', ArticleController::class);
     Route::resource('slides', SlideController::class);
     Route::resource('statements', StatementController::class);
+    Route::resource('documentCategory', DocumentCategoryController::class);
+    Route::resource('docs', DocumentController::class);
 });

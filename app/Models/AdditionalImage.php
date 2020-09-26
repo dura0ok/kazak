@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class AdditionalImage extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
     protected $table = "additional_images";
     protected $fillable = ['name'];

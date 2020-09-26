@@ -80,7 +80,8 @@ class StatementController extends Controller
     /**
      * @param Statement $statement
      */
-    public function deleteStatementFile(Statement $statement): void{
+    public function deleteStatementFile(Statement $statement): void
+    {
         Storage::disk('public')->delete($statement->file);
     }
 

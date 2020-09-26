@@ -9,7 +9,7 @@
                     <a href="#" class="btn" data-id="{{ $statement->id }}"><span>›</span>{{ $statement->title }}</a>
                 </div>
                 <div class="content" data-id="{{ $statement->id }}">
-                    <a href="{{ asset('storage/'.$statement->file) }}">Открыть файл  || {{ $statement->id }}</a>
+                    <a href="{{ asset('storage/'.$statement->file) }}">Открыть файл || {{ $statement->id }}</a>
                 </div>
             </div>
         @endforeach

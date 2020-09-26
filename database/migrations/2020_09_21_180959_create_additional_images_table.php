@@ -28,7 +28,7 @@ class CreateAdditionalImagesTable extends Migration
      */
     public function down()
     {
-        Schema::create('additional_images', function (Blueprint $table) {
+        Schema::table('additional_images', function (Blueprint $table) {
             $table->dropForeign('additional_images_article_id_foreign');
         });
         Schema::dropIfExists('additional_images');
