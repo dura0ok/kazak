@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Document;
+use App\Models\DocumentCategory;
 use App\Models\Statement;
 
 class PageController extends Controller
@@ -19,7 +21,9 @@ class PageController extends Controller
 
     public function documents()
     {
-        return view("pages.documents");
+        $documents = Document::all();
+        $categories = DocumentCategory::all();
+        return view("pages.documents", ['documentsGroups' => $documents->groupBy('category_id'), 'categories' => $categories]);
     }
 
     public function networks()

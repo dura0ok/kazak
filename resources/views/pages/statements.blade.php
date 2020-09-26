@@ -4,7 +4,7 @@
     <h1 class="page_title" style="text-decoration: none;">Донские войсковые ведомости</h1>
     <div class="statements">
         @foreach($statements as $statement)
-            <div class="state" data-id="{{ $statement->id }}">
+            <div class="state accord" data-id="{{ $statement->id }}">
                 <div class="btn-wrapper">
                     <a href="#" class="btn" data-id="{{ $statement->id }}"><span>›</span>{{ $statement->title }}</a>
                 </div>

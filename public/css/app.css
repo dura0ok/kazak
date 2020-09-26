@@ -363,34 +363,34 @@ body {
   margin-left: 5%;
   margin-top: 5%;
 }
-.wrapper .container .content-wrapper #content .statements .state, .wrapper .container .content-wrapper #content .documents .state {
+.wrapper .container .content-wrapper #content .statements .state, .wrapper .container .content-wrapper #content .statements .document, .wrapper .container .content-wrapper #content .documents .state, .wrapper .container .content-wrapper #content .documents .document {
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 50px;
   vertical-align: bottom;
 }
-.wrapper .container .content-wrapper #content .statements .state .btn-wrapper .btn, .wrapper .container .content-wrapper #content .documents .state .btn-wrapper .btn {
+.wrapper .container .content-wrapper #content .statements .state .btn-wrapper .btn, .wrapper .container .content-wrapper #content .statements .document .btn-wrapper .btn, .wrapper .container .content-wrapper #content .documents .state .btn-wrapper .btn, .wrapper .container .content-wrapper #content .documents .document .btn-wrapper .btn {
   display: block;
   font-size: 24px;
   text-decoration: none;
 }
-.wrapper .container .content-wrapper #content .statements .state .btn-wrapper .btn span, .wrapper .container .content-wrapper #content .documents .state .btn-wrapper .btn span {
+.wrapper .container .content-wrapper #content .statements .state .btn-wrapper .btn span, .wrapper .container .content-wrapper #content .statements .document .btn-wrapper .btn span, .wrapper .container .content-wrapper #content .documents .state .btn-wrapper .btn span, .wrapper .container .content-wrapper #content .documents .document .btn-wrapper .btn span {
   font-size: 30px;
   display: inline-block;
 }
-.wrapper .container .content-wrapper #content .statements .state .content, .wrapper .container .content-wrapper #content .documents .state .content {
+.wrapper .container .content-wrapper #content .statements .state .content, .wrapper .container .content-wrapper #content .statements .document .content, .wrapper .container .content-wrapper #content .documents .state .content, .wrapper .container .content-wrapper #content .documents .document .content {
   margin-top: 2%;
   padding-bottom: 2%;
   border-bottom: 1px dashed #d7dcdf;
   display: none;
 }
-.wrapper .container .content-wrapper #content .statements .state .content a, .wrapper .container .content-wrapper #content .documents .state .content a {
+.wrapper .container .content-wrapper #content .statements .state .content a, .wrapper .container .content-wrapper #content .statements .document .content a, .wrapper .container .content-wrapper #content .documents .state .content a, .wrapper .container .content-wrapper #content .documents .document .content a {
   color: #065196;
   text-decoration: none;
   font-size: 20px;
 }
-.wrapper .container .content-wrapper #content .statements .state .content p, .wrapper .container .content-wrapper #content .documents .state .content p {
+.wrapper .container .content-wrapper #content .statements .state .content p, .wrapper .container .content-wrapper #content .statements .document .content p, .wrapper .container .content-wrapper #content .documents .state .content p, .wrapper .container .content-wrapper #content .documents .document .content p {
   margin-left: 0.2%;
 }
 .wrapper .container .content-wrapper #content .networks {
