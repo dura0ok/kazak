@@ -164,6 +164,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 3%;
 
         li {
             margin-top: 1%;
@@ -368,4 +369,34 @@ header {
         }
     }
     // End documents container
+
+    // Start menu index
+    .menu_admin_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .item{
+            margin-bottom: 3%;
+            width: 20%;
+            border: 2px solid #3f428a;
+            padding: 40px;
+        }
+        .url_title{
+            color: #044f97;
+            font-size: 24px;
+        }
+        h5{
+            color: #f44336;
+            font-size: 30px;
+        }
+        h6{
+            font-size: 18px;
+            color: #35393d;
+        }
+        .buttons{
+            margin-top: 5%;
+        }
+    }
+    // End menu index
 }

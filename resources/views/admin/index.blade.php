@@ -9,8 +9,8 @@
         <li><a href="{{ route('statements.index') }}">Управление ведомостями</a></li>
         <li><a href="{{ route('documentCategory.index') }}">Управление категориями документов</a></li>
         <li><a href="{{ route('docs.index') }}">Управление документами</a></li>
+        <li><a href="">Управление меню</a></li>
         <li><a href="">Управление страницами</a></li>
         <li><a href="">Управление галереей</a></li>
-        <li><a href="">Управление меню</a></li>
     </ul>
 @endsection
