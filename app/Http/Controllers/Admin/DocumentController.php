@@ -102,6 +102,7 @@ class DocumentController extends Controller
      */
     public function destroy(Document $doc)
     {
+        $this->deleteDocFile($doc);
         Document::destroy($doc->id);
         return Redirect::route('docs.index');
     }
