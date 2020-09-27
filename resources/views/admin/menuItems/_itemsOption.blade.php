@@ -11,7 +11,7 @@
     </option>
 
     @isset ($menuItem['children'])
-        @include('admin.menuItem._itemsOption', [
+        @include('admin.menuItems._itemsOption', [
             'menu' => $menuItem['children'],
             'item' => $item,
             'delimiter' => ' - ' . $delimiter

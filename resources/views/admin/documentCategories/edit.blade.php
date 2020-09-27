@@ -3,7 +3,7 @@
 @section("content")
     <a href="{{ route('admin.index') }}" class="back_form_link">Вернуться в админку</a>
     <h1 class="section_name">Обновить Категорию документа</h1>
-    <form action="{{ route('documentCategory.update', $category) }}" class="creation_form" method="POST"
+    <form action="{{ route('documentCategories.update', $category) }}" class="creation_form" method="POST"
           enctype="multipart/form-data">
         @csrf
         {{ method_field('PUT') }}

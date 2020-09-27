@@ -21,7 +21,7 @@ class DocumentCategoryController extends Controller
     public function index()
     {
         $documentCategory = DocumentCategory::all();
-        return view('admin.documentCategory.index', ['documentCategory' => $documentCategory]);
+        return view('admin.documentCategories.index', ['documentCategory' => $documentCategory]);
     }
 
     /**
@@ -29,7 +29,7 @@ class DocumentCategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.documentCategory.create');
+        return view('admin.documentCategories.create');
     }
 
 
@@ -39,7 +39,7 @@ class DocumentCategoryController extends Controller
             'title' => 'required|max:255',
         ]));
         $documentCategory->save();
-        return Redirect::route('documentCategory.index');
+        return Redirect::route('documentCategories.index');
     }
 
 
@@ -51,7 +51,7 @@ class DocumentCategoryController extends Controller
 
     public function edit(DocumentCategory $documentCategory)
     {
-        return view('admin.documentCategory.edit', ['category' => $documentCategory]);
+        return view('admin.documentCategories.edit', ['category' => $documentCategory]);
     }
 
 
@@ -61,7 +61,7 @@ class DocumentCategoryController extends Controller
             'title' => 'required|max:255',
         ]);
         $documentCategory->update(['title' => $request->get('title')]);
-        return Redirect::route('documentCategory.index');
+        return Redirect::route('documentCategories.index');
     }
 
     /**
@@ -79,6 +79,6 @@ class DocumentCategoryController extends Controller
     {
         $this->deleteFilesByDocumentCategory($documentCategory);
         DocumentCategory::destroy($documentCategory->id);
-        return Redirect::route('documentCategory.index');
+        return Redirect::route('documentCategories.index');
     }
 }

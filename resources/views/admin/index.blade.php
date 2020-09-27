@@ -7,10 +7,10 @@
         <li><a href="{{ route('slides.index') }}">Управление слайдером</a></li>
         <li><a href="{{ route('news.index') }}">Управление новостями</a></li>
         <li><a href="{{ route('statements.index') }}">Управление ведомостями</a></li>
-        <li><a href="{{ route('documentCategory.index') }}">Управление категориями документов</a></li>
+        <li><a href="{{ route('documentCategories.index') }}">Управление категориями документов</a></li>
         <li><a href="{{ route('docs.index') }}">Управление документами</a></li>
-        <li><a href="">Управление меню</a></li>
+        <li><a href="{{ route('menu.index') }}">Управление меню</a></li>
         <li><a href="">Управление страницами</a></li>
-        <li><a href="">Управление галереей</a></li>
+        <li><a href="javascript:alert('Данная страница временно недоступна')">Управление галереей</a></li>
     </ul>
 @endsection

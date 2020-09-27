@@ -37,7 +37,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::resource('news', ArticleController::class);
     Route::resource('slides', SlideController::class);
     Route::resource('statements', StatementController::class);
-    Route::resource('documentCategory', DocumentCategoryController::class);
+    Route::resource('documentCategories', DocumentCategoryController::class);
     Route::resource('docs', DocumentController::class);
     Route::resource('menu', MenuItemController::class);
 });

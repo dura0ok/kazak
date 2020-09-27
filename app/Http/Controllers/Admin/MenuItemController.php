@@ -23,13 +23,13 @@ class MenuItemController extends Controller
     public function index()
     {
         $menu = MenuItem::all();
-        return view('admin.menuItem.index', ['menu' => $menu]);
+        return view('admin.menuItems.index', ['menu' => $menu]);
     }
 
 
     public function create()
     {
-        return view('admin.menuItem.create', ['menu' => $this->generateMenu()]);
+        return view('admin.menuItems.create', ['menu' => $this->generateMenu()]);
     }
 
     /**
@@ -60,7 +60,7 @@ class MenuItemController extends Controller
 
     public function edit(MenuItem $menu)
     {
-        return view('admin.menuItem.edit', ['item' => $menu, 'menu' => $this->generateMenu()]);
+        return view('admin.menuItems.edit', ['item' => $menu, 'menu' => $this->generateMenu()]);
     }
 
     /**
@@ -85,7 +85,7 @@ class MenuItemController extends Controller
 
     public function destroy(MenuItem $menu)
     {
-
+        // TODO доделать удаления картинок у pages у каждого menuItems
         foreach($menu->descendants as $descendant){
             MenuItem::destroy($descendant->id);
         }

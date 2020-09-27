@@ -12,7 +12,7 @@
         <label for="parent">Выберите родителя меню</label>
         <select name="parent_id" id="parent">
             <option value="0">-- без родительской категории --</option>
-            @include('admin.menuItem._itemsOption', ['menu' => $menu, 'item' => [], 'delimiter' => ''])
+            @include('admin.menuItems._itemsOption', ['menu' => $menu, 'item' => [], 'delimiter' => ''])
         </select>
         <label for="url">Введите ссылку(куда будет ввести пункт меню)</label>
         <input type="text" name="url" id="url" placeholder="Ссылка">

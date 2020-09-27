@@ -13,7 +13,7 @@
         <label for="parent">Обновите родителя меню</label>
         <select name="parent_id" id="parent">
             <option value="0" @if($item->parent_id == 0) selected @endif>-- без родительской категории --</option>
-            @include('admin.menuItem._itemsOption', ['menu' => $menu, 'item' => $item, 'delimiter' => ''])
+            @include('admin.menuItems._itemsOption', ['menu' => $menu, 'item' => $item, 'delimiter' => ''])
         </select>
         <label for="url">Введите(Обновите) ссылку(куда будет ввести пункт меню)</label>
         <input type="text" name="url" id="url" placeholder="Ссылка" value="{{ $item->url }}">
