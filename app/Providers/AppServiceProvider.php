@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 
+use App\Models\MenuItem;
+use App\Services\Tree;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.admin.template', function ($view) {
             $view->with('user', auth()->user());
+        });
+        $treeService = new Tree(MenuItem::with('descendants')->get()->toArray());
+        view()->composer('layouts.base.template', function ($view) use ($treeService) {
+            $view->with('menu', $treeService->build(0));
         });
     }
 }

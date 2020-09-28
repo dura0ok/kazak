@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\StatementController;
+use App\Http\Controllers\Admin\PageController as AdminPageController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,7 @@ Route::prefix("pages")->group(function () {
     Route::get("statements", [PageController::class, "statements"])->name("statements");
     Route::get("news", [PageController::class, "news"])->name("news");
     Route::get("article/{id}", [PageController::class, "article"])->name("article");
+    Route::get('page/{title}', [PageController::class, 'getPage'])->name('getPage');
 });
 
 // authentication routes
@@ -40,4 +42,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::resource('documentCategories', DocumentCategoryController::class);
     Route::resource('docs', DocumentController::class);
     Route::resource('menu', MenuItemController::class);
+    Route::resource('pages', AdminPageController::class, [
+        'as' => 'admin.pages'
+    ]);
+    Route::post('pages/upload', [AdminPageController::class, 'uploadImage'])->name('admin.pages.pages.upload');
 });

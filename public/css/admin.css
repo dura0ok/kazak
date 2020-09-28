@@ -340,3 +340,28 @@ header .menu li a {
 .admin_content_wrapper .menu_admin_container .buttons {
   margin-top: 5%;
 }
+.admin_content_wrapper .pages-admin-container .pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin_content_wrapper .pages-admin-container .pages .page {
+  border: 3px solid #2d3748;
+  padding: 50px;
+}
+.admin_content_wrapper .pages-admin-container .pages .page .page_title {
+  display: block;
+  color: #044f97;
+  font-size: 40px;
+  margin-bottom: 5%;
+}
+.admin_content_wrapper .pages-admin-container .pages .page .page_title span {
+  color: orange;
+  font-size: 30px;
+}
+.admin_content_wrapper .pages-admin-container .page-full h1 {
+  text-align: center;
+  color: #2d3748;
+  font-size: 40px;
+}

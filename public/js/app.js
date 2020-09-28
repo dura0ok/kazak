@@ -96,7 +96,7 @@
 function openSubLinks(event) {
   event.preventDefault();
   var el = event.target;
-  var sub = document.querySelector(".submenu");
+  var sub = el.nextElementSibling;
 
   if (el.classList.contains("opened")) {
     el.classList.remove("opened");

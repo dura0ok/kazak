@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Document;
 use App\Models\DocumentCategory;
+use App\Models\Page;
 use App\Models\Statement;
 
 class PageController extends Controller
@@ -47,5 +48,10 @@ class PageController extends Controller
     {
         $article = Article::with('additionalImages')->where('id', $id)->first();
         return view('pages.article', ['article' => $article]);
+    }
+
+    public function getPage($title){
+        $page = Page::where('title', $title)->first();
+        return view('pages.page', ['page' => $page]);
     }
 }
