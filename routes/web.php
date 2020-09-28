@@ -27,6 +27,7 @@ Route::prefix("pages")->group(function () {
     Route::get("news", [PageController::class, "news"])->name("news");
     Route::get("article/{id}", [PageController::class, "article"])->name("article");
     Route::get('page/{title}', [PageController::class, 'getPage'])->name('getPage');
+    Route::get('getGallery', [PageController::class, 'getGallery'])->name('getGallery');
 });
 
 // authentication routes

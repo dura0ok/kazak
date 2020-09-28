@@ -7,7 +7,7 @@
         popupDisplay: 'full',
         charCounter: true,
         charCounterLabel: 'Символы :',
-        imageGalleryUrl: 'https://etyswjpn79.execute-api.ap-northeast-1.amazonaws.com/suneditor-demo',
+        imageGalleryUrl: undefined,
         imageUploadUrl: undefined,
         lang: SUNEDITOR_LANG['ru'],
         buttonList: [
@@ -137,6 +137,7 @@
     });
 
     editor.getContext().options.imageUploadUrl = document.getElementById('uploadUrl').value
+    editor.getContext().options.imageGalleryUrl = document.getElementById('galleryUrl').value
     btn.addEventListener('click', (e) => {
         console.log(editor.getContext().options.imageUploadUrl)
         editor.save();

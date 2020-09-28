@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Document;
 use App\Models\DocumentCategory;
+use App\Models\Gallery;
 use App\Models\Page;
 use App\Models\Statement;
 
@@ -53,5 +54,14 @@ class PageController extends Controller
     public function getPage($title){
         $page = Page::where('title', $title)->first();
         return view('pages.page', ['page' => $page]);
+    }
+
+    public function getGallery(){
+        $images = Gallery::all();
+        $response = ['statusCode' => 200, 'result' => []];
+        foreach ($images as $image){
+            $response['result'][] = ['src' => asset('storage/'.$image->path), 'name' => $image->title];
+        }
+        return response()->json($response);
     }
 }

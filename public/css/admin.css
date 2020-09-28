@@ -347,6 +347,8 @@ header .menu li a {
   flex-direction: column;
 }
 .admin_content_wrapper .pages-admin-container .pages .page {
+  width: 35%;
+  margin-bottom: 5%;
   border: 3px solid #2d3748;
   padding: 50px;
 }
