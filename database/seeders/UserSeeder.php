@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
 
         User::create([
                 'name' => 'ГКО-РОСТОВСКОЕ-АДМИН',
-                'email' => 'gko-rostovskoe@yandex.ru',
+                'email' => 'gkorostovskoe61@yandex.ru',
                 'password' => Hash::make('44gko2020'),
                 'is_admin' => 1
             ]
