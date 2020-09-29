@@ -5,6 +5,7 @@ namespace App\Providers;
 
 use App\Models\MenuItem;
 use App\Services\Tree;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    	if (Schema::hasTable('menu_items')) {
         view()->composer('layouts.admin.template', function ($view) {
             $view->with('user', auth()->user());
         });
@@ -33,5 +35,6 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.base.template', function ($view) use ($treeService) {
             $view->with('menu', $treeService->build(0));
         });
+     }
     }
 }
