@@ -367,3 +367,27 @@ header .menu li a {
   color: #2d3748;
   font-size: 40px;
 }
+.admin_content_wrapper .gallery-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admin_content_wrapper .gallery-wrapper .gallery_image {
+  width: 50%;
+  border: 2px solid #eaaa02;
+  padding: 10px;
+  margin-bottom: 3%;
+}
+.admin_content_wrapper .gallery-wrapper .gallery_image h1 {
+  color: #35393d;
+  font-size: 24px;
+  text-align: center;
+}
+.admin_content_wrapper .gallery-wrapper .gallery_image img {
+  width: 45%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 3% auto;
+}

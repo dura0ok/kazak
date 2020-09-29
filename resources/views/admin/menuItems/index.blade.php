@@ -6,7 +6,7 @@
     <div class="menu_admin_container">
         @foreach($menu as $item)
         <div class="item">
-            <h5>#{{ $item->id }}</h5>
+            <h5>#{{ $item->id }} Сортировочный номер: {{ $item->sort }}</h5>
             <a href="@if($item->is_url_public == 1) {{trim($item->url)}} @else {{url(trim($item->url))}} @endif" class="url_title">{{ $item->title }}</a>
             @if($item->parent_id != 0)
             <h6>ID родителя: {{ $item->parent_id }}</h6>

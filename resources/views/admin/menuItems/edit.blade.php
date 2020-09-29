@@ -10,6 +10,8 @@
         @include("layouts.admin.parts.errors_block")
         <label for="title">Введите краткое название(Не больше 100 символов)</label>
         <input type="text" name="title" id="title" placeholder="Название категории" value="{{ $item->title }}">
+        <label for="sort">Сортировочный номер</label>
+        <input type="number" name="sort" id="sort" placeholder="Сортировочный номер" value="{{ $item->sort }}">
         <label for="parent">Обновите родителя меню</label>
         <select name="parent_id" id="parent">
             <option value="0" @if($item->parent_id == 0) selected @endif>-- без родительской категории --</option>

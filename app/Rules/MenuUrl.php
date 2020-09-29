@@ -23,7 +23,7 @@ class MenuUrl implements Rule
     public function __construct(bool $is_url_public)
     {
         $this->is_url_public = $is_url_public;
-        $this->notPublicUrlPattern = "/^[A-Za-z0-9]+$/";
+        $this->notPublicUrlPattern = "/^[A-Za-z0-9\/]+$/";
     }
 
     /**

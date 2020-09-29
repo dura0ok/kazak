@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.admin.template', function ($view) {
             $view->with('user', auth()->user());
         });
-        $treeService = new Tree(MenuItem::with('descendants')->get()->toArray());
+        $treeService = new Tree(MenuItem::orderBy('sort')->with('descendants')->get()->toArray());
         view()->composer('layouts.base.template', function ($view) use ($treeService) {
             $view->with('menu', $treeService->build(0));
         });

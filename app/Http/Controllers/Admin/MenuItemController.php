@@ -22,7 +22,7 @@ class MenuItemController extends Controller
 
     public function index()
     {
-        $menu = MenuItem::all();
+        $menu = MenuItem::orderBy('sort')->get();
         return view('admin.menuItems.index', ['menu' => $menu]);
     }
 
@@ -42,6 +42,7 @@ class MenuItemController extends Controller
         $request->validate([
             'title' => 'required|max:250',
             'parent_id' => 'required|numeric',
+            'sort' => 'required|numeric',
             'url' => ['required', new MenuUrl($is_url_public)],
         ]);
         $item = new MenuItem();
@@ -74,6 +75,7 @@ class MenuItemController extends Controller
         $request->validate([
             'title' => 'required|max:250',
             'parent_id' => 'required|numeric',
+            'sort' => 'required|numeric',
             'url' => ['required', new MenuUrl($is_url_public)],
         ]);
         $menu->fill($request->all());

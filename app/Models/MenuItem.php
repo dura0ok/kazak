@@ -10,7 +10,7 @@ class MenuItem extends Model
     use HasFactory;
     protected $table = 'menu_items';
     public $timestamps = false;
-    protected $fillable = ['title', 'parent_id', 'url'];
+    protected $fillable = ['title', 'parent_id', 'url', 'sort'];
 
 
     public function descendants()

@@ -4,6 +4,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DocumentCategoryController;
 use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\MenuItemController;
@@ -46,5 +47,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::resource('pages', AdminPageController::class, [
         'as' => 'admin.pages'
     ]);
+    Route::resource('gallery', GalleryController::class);
     Route::post('pages/upload', [AdminPageController::class, 'uploadImage'])->name('admin.pages.pages.upload');
 });
