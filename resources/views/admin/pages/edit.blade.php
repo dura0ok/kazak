@@ -16,6 +16,7 @@
         <label for="sample">Создайте контент страницы в редакторе ниже</label>
         <textarea id="sample" class="sun-editor-editable sun" name="content">{!! $page->content !!}</textarea>
         <input id="uploadUrl" type="hidden" value="{{ route('admin.pages.pages.upload') }}">
+        <input id="galleryUrl" type="hidden" value="{{ route('getGallery') }}">
         <button class="green_btn" id="createButton">Обновить страницу</button>
     </form>
 @endsection
