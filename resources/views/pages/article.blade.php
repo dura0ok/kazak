@@ -9,7 +9,6 @@
         <img src="{{ asset('storage/'.$article->image) }}" alt="{{ $article->name }}"
              title="{{ $article->image }}">
         <p>{{ $article->text }}</p>
-        <a href="" class="green_btn">Подробнее</a>
 
 
         @if(!$article->additionalImages->isEmpty())
