@@ -8,7 +8,7 @@
                 <h4>{{ $slide->title }}</h4>
                 <p>{{ $slide->description }}</p>
                 @if($slide->article_id != null)
-                    <a href="" class="more">Подробно ...</a>
+                    <a href="{{ route('article', $slide->article_id) }}" class="more">Подробно ...</a>
                 @endif
             </div>
         </div>
