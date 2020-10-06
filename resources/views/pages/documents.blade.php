@@ -10,7 +10,7 @@
                 </div>
                 <div class="content" data-id="{{ $groupID }}">
                     @foreach($documents as $document)
-                    <a href="{{ asset('storage/'.$document->file) }}">Открыть файл || {{ $document->id }}</a><br>
+                    <a href="{{ asset('storage/'.$document->file) }}">{{ $document->title }}</a><br>
                     @endforeach
                 </div>
             </div>
