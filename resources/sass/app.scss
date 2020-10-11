@@ -197,9 +197,9 @@ body {
 
                     img {
                         width: 100%;
-                        max-width: 100%;
-                        object-fit: contain;
-
+                        //max-width: 100%;
+                        object-fit: cover;
+                        height: 100%;
                     }
 
                     //transparent slide info block start
