@@ -7,14 +7,14 @@ function accord(event) {
     if (el.classList.contains("opened")) {
         content.style.display = "none"
         el.querySelector('span').style.transform = 'rotate(0deg)'
-        accord.style.marginBottom = "0"
+        accord.style.padding = "0"
         el.classList.remove("opened")
         return
     }
     el.querySelector('span').style.transform = 'rotate(90deg)'
     el.classList.add("opened")
     content.style.display = "block"
-    accord.style.marginBottom = "10%"
+    accord.style.padding = "10px"
 }
 
 document.querySelectorAll(".btn").forEach(btn => {
