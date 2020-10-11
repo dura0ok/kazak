@@ -79,16 +79,7 @@ body {
     }
 
     //end header
-   
-    // slider fixing
-    .slick-list{
-    	height: 600px !important;
-    }
-    .slick-track{
-    	display: flex !important;
-    	height: 100% !important;
-    }
-    // end slider fixing
+
     // content
     .content-wrapper {
         margin-top: 2%;
@@ -207,7 +198,8 @@ body {
                     img {
                         width: 100%;
                         //max-width: 100%;
-                        object-fit: cover;
+                        object-fit: contain;
+                        height: auto;
 
                     }
 
