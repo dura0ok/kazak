@@ -33,6 +33,13 @@ body {
     margin: 3% auto;
 }
 
+// fix sidebar styles
+.slick-list { height: 600px !important; }
+.slick-track { display: flex !important; height: 100% !important; }
+.slick-active { height: 100% !important; }
+.slick-active img { height: 100% !important; object-fit: cover !important;}
+// End fix sidebar styles
+
 .wrapper .container {
     box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
     padding: 10px;
