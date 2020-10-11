@@ -177,6 +177,7 @@ body {
 
             // start slider
             .slider {
+                height: 100%;
                 width: 95%;
                 margin: 0 auto;
                 background-color: orange;
@@ -197,6 +198,8 @@ body {
                     img {
                         width: 100%;
                         max-width: 100%;
+                        object-fit: contain;
+
                     }
 
                     //transparent slide info block start
@@ -493,7 +496,7 @@ body {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    height: 50px;
+
                     vertical-align: bottom;
 
                     .btn-wrapper {
