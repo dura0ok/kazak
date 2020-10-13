@@ -15,9 +15,10 @@ body {
 
 .wrapper {
     // TODO убрать test1, test2 png как только утвержу фон
-    background: url("../images/cloud.png") repeat-x scroll center top rgba(0, 0, 0, 0);
+    //background: url("../images/cloud.png") repeat-x scroll center top rgba(0, 0, 0, 0);
     //background: url("../images/goluboe_nebo.jpg") center;
-    height: 100vh;
+    background: url("../images/testfon.jpg");
+    background-size: cover;
     width: auto;
 }
 
@@ -41,7 +42,7 @@ body {
 // End fix sidebar styles
 
 .wrapper .container {
-    box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
+    //box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
     padding: 10px;
     width: 70%;
     //height: 100%; // Вот это штука отвечает за этот фон контента надо как-то сделать адаптивно под контент
