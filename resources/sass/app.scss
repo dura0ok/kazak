@@ -43,7 +43,6 @@ body {
 
 .wrapper .container {
     //box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
-    padding: 10px;
     width: 70%;
     //height: 100%; // Вот это штука отвечает за этот фон контента надо как-то сделать адаптивно под контент
     margin: 0 auto;
@@ -53,6 +52,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: rgb(117, 144, 156);
 
         .info {
             margin: 0 10px;
@@ -62,6 +62,7 @@ body {
             .small {
                 font-weight: bold;
                 text-transform: uppercase;
+                color: white;
             }
 
             .blue {
@@ -81,7 +82,7 @@ body {
             p {
                 margin-top: 2%;
                 font-size: 18px;
-                color: #35393d;
+                color: white;
             }
         }
     }
@@ -93,36 +94,41 @@ body {
         margin-top: 2%;
         display: flex;
         justify-content: space-between;
+        background: rgb(73, 106, 113);
 
         //sidebar
         #sidebar {
             width: 30%;
             height: 100%;
-            background: white;
+
 
             // search block
             .search-block {
-                margin-bottom: 4%;
+                width: 90%;
+
+                margin: 3% auto 4%;
+                background: #e5e5e5;
 
                 form {
                     display: flex;
                     flex-direction: row;
 
                     input {
+                        outline: none;
                         width: 70%;
-                        background: none repeat scroll 0 0 #f4f6f7;
+                        background: none repeat scroll 0 0 #e5e5e5;
                         border: 1px solid #e4e6e7;
                         padding: 5px;
                         box-shadow: inset 1px 2px 1px #949696;
                     }
 
                     button {
-                        background: none repeat scroll 0 0 $yellow;
+                        background: none repeat scroll 0 0 #9ca06a;
                         width: 30%;
                         padding: 3px 12px;
                         border-radius: 2px;
-                        border-bottom: 1px solid $yellow;
-                        border-top: 1px solid $yellow;
+                        border-bottom: 1px solid #9ca06a;
+                        border-top: 1px solid #9ca06a;
                     }
                 }
             }
@@ -131,7 +137,11 @@ body {
 
             // start menu
             ul {
+                background: #e5e5e5;
                 border: 4px solid #e4e8eb;
+                width: 90%;
+                display: block;
+                margin: 0 auto;
 
                 li {
                     padding: 8px;
@@ -155,8 +165,8 @@ body {
 
                     a {
                         text-transform: uppercase;
-                        color: #191a1c;
-                        font-size: 16px;
+                        color: #486a74;
+                        font-size: 18px;
                         text-decoration: none;
                         font-weight: 400;
 
@@ -172,8 +182,9 @@ body {
         // start main content
         #content {
             margin-left: 1%;
-            width: 68%;
+            width: 65%;
             height: 100%;
+            padding: 0 10px;
 
             .page_title {
                 font-size: 40px;
