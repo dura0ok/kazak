@@ -6,6 +6,7 @@ function accord(event) {
     let accord = document.querySelector(`.accord[data-id="${dataID}"]`)
     if (el.classList.contains("opened")) {
         content.style.display = "none"
+        content.classList.remove("opened")
         el.querySelector('span').style.transform = 'rotate(0deg)'
         accord.style.padding = "0"
         el.classList.remove("opened")
@@ -13,6 +14,7 @@ function accord(event) {
     }
     el.querySelector('span').style.transform = 'rotate(90deg)'
     el.classList.add("opened")
+    content.classList.add("opened")
     content.style.display = "block"
     accord.style.padding = "10px"
 }
