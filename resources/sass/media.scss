@@ -1,0 +1,170 @@
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  .wrapper .container header{ background:  purple; }
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1ем280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .wrapper .container header{ background:  saddlebrown; }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .wrapper .container header{ background: #b81b1b; }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .wrapper .container header{ background:  yellow; }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .wrapper .container header{ background:  green; }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .blockTitle{
+    color: white;
+  }
+  .wrapper{
+    .container{
+      width: 100%;
+      margin: 0;
+      header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .menu-container{
+          display: block;
+        }
+        .info{
+          width: 100%;
+          order: 3;
+          .big{
+            font-size: 12px;
+            text-align: center;
+          }
+          .small{
+            font-size: 10px;
+            text-align: center;
+          }
+          p{
+            display: block;
+            margin-bottom: 3%;
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+        .logo{
+          order: 1;
+          width: 40%;
+           height: 80%;
+           img{
+            width: 100%; 
+            height: 100%;
+           }
+          
+        }
+        .flag{
+          width: 40%;
+          order: 2;
+          img{
+            width: 100%; 
+            height: 100%;
+           }
+        
+        }
+      }
+      .content-wrapper{
+        #sidebar{
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: 100%;
+          &.active {
+            display: block;
+          }
+        }
+        #content{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          .slider{
+            width: 90%;
+            .slick-dots { left: 65%; width: 80px; }
+            
+          }
+          .ataman_wrapper{
+            #questionTitle{
+              padding: 0;
+              width: 90%;
+              color: white;
+            }
+            .questions .answer .attachments .attachment img{
+              display: block;
+              width: 90%;
+              margin: 0 auto;
+            }
+          }
+          .article{
+            width: 95%;
+            h1{
+              font-size: 1em;
+            }
+            .attachments{
+            .attachment{
+              margin: 4% auto;
+            }
+          }
+          }
+        }
+      }
+    }
+    footer{
+      height: 100%;
+      width: 100%;
+      border-radius: 0px;
+      h1{
+        font-size: 10px;
+      }
+    }
+  }
+
+}

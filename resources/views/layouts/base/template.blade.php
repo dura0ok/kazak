@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Городское казачье общество «Ростовское»</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media.css') }}">
     @stack('styles')
 </head>
 
 <body>
 <div class="wrapper">
-    <div class="container">
+    <div class="container" style="display: flex; flex-direction: column;">
         <!-- Start Header -->
     @include("layouts.base.parts.header")
     <!-- End header -->
         <!-- Start content-wrapper -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="flex-grow: 1;">
         @include("layouts.base.parts.sidebar")
         <!-- Start main content -->
             <main id="content">
@@ -25,9 +26,10 @@
             <!-- End main content -->
             <!-- End content-wrapper -->
         </div>
+        @include("layouts.base.parts.footer")
         <!-- End container -->
     </div>
-@include("layouts.base.parts.footer")
+
 <!-- End wrapper -->
 </div>
 <script src="{{ asset('js/app.js') }}"></script>

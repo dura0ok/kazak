@@ -49,6 +49,14 @@ body {
 
     //header styles
     header {
+        .menu-container{
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: yellow;
+            width: 25px;
+            display: none;
+        }
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -95,12 +103,14 @@ body {
         display: flex;
         justify-content: space-between;
         background: rgb(73, 106, 113);
+        padding-bottom: 5%;
+        min-height: 90vh;
 
         //sidebar
         #sidebar {
             width: 30%;
             height: 100%;
-
+            z-index: 10;
 
             // search block
             .search-block {
@@ -199,7 +209,7 @@ body {
             .slider {
                 height: 100%;
                 width: 95%;
-                margin: 0 auto;
+                margin: 3% auto;
                 background-color: orange;
                 // position: relative;
 
@@ -483,6 +493,7 @@ body {
                                         object-fit: contain;
                                     }
                                 }
+
                             }
                         }
                     }
@@ -608,13 +619,14 @@ body {
                     margin-top: 5%;
                     margin-bottom: 2%;
                     text-align: center;
-                    color: #35393d;
+                    color: #F3B104;
                 }
 
                 p {
                     margin: 2%;
                     line-height: 30px;
                     text-align: center;
+                    color: white;
                 }
 
                 img {
@@ -626,8 +638,10 @@ body {
 
                 .attachments {
                     h1 {
+                    	font-size: 1em;
                         text-align: center;
-                        color: #35393d;
+                        color: yellow;
+                        font-weight: lighter;
                     }
 
                     display: flex;
@@ -666,13 +680,13 @@ body {
 footer {
     background: #000000;
     height: 50px;
-    width: 71.5%;
     border-radius: 5px;
     margin: 0 auto;
+    width: 100%;
 
     h1 {
         color: white;
-        font-size: 24px;
+        font-size: 1.2em;
         text-align: center;
         line-height: 50px;
     }

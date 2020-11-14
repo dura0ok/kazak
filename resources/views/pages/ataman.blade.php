@@ -42,9 +42,7 @@
                     Россией.
                 </p>
                 <div class="answer">
-                    <div class="arrow">
-                        🠕
-                    </div>
+                    <div class="arrow">&darr;</div>
                     <h1 class="greeting">Уважаемый Аркадий Леонидович!</h1>
                     <p class="answer_content">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, odit
@@ -84,9 +82,7 @@
                     Россией.
                 </p>
                 <div class="answer">
-                    <div class="arrow">
-                        🠕
-                    </div>
+                    <div class="arrow">&darr;</div>
                     <h1 class="greeting">Уважаемый Аркадий Леонидович!</h1>
                     <p class="answer_content">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, odit

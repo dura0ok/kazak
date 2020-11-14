@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/tab.js', 'public/js')
     .js('resources/js/editor.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/media.scss', 'public/css')
     .options({
         processCssUrls: false
     })

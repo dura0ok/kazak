@@ -16,3 +16,13 @@ let parents = document.getElementsByClassName("parent")
 for (let i = 0; i < parents.length; i++) {
     parents[i].addEventListener('click', openSubLinks)
 }
+
+const hamburger = document.querySelector("#hamburger")
+const menu = document.querySelector("#sidebar")
+hamburger.addEventListener("click", () => {
+    if(menu.classList.contains("active")){
+        menu.classList.remove("active")
+        return
+    }
+    menu.classList.add("active")
+});

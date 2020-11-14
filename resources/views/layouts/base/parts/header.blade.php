@@ -1,5 +1,8 @@
 <!-- Start header-->
 <header>
+    <div class="menu-container">
+        <img id="hamburger" src="{{ asset("images/hamburger_menu.svg") }}" alt="">
+    </div>
     <!-- Start logo -->
     <div class="logo">
         <img src="{{ asset("images/logo.png") }}" alt="Герб Ростовского Казачьего общества"
