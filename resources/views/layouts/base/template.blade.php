@@ -12,12 +12,12 @@
 
 <body>
 <div class="wrapper">
-    <div class="container" style="display: flex; flex-direction: column;">
+    <div class="container">
         <!-- Start Header -->
     @include("layouts.base.parts.header")
     <!-- End header -->
         <!-- Start content-wrapper -->
-        <div class="content-wrapper" style="flex-grow: 1;">
+        <div class="content-wrapper">
         @include("layouts.base.parts.sidebar")
         <!-- Start main content -->
             <main id="content">
