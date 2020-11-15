@@ -18,6 +18,9 @@
             <h5 class="small">Войскового Казачьего общества</h5>
             <h1 class="big blue">Всевеликое Войско Донское</h1>
             <p>Официальный сайт</p>
+            <div class="bvi-container">
+                <button class="bvi-open bvi-enable">Версия сайта для слабовидящих</button>
+             </div>
         </div>
     </div>
     <!-- End info -->

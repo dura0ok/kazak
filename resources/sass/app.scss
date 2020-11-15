@@ -18,7 +18,7 @@ body {
     // TODO убрать test1, test2 png как только утвержу фон
     //background: url("../images/cloud.png") repeat-x scroll center top rgba(0, 0, 0, 0);
     //background: url("../images/goluboe_nebo.jpg") center;
-    background: url("../images/testfon.jpg");
+    background: url("../images/fon.jpg");
     background-size: cover;
     width: auto;
 }
@@ -109,6 +109,23 @@ body {
                 margin-top: 2%;
                 font-size: 18px;
                 color: white;
+            }
+
+            .bvi-container {
+                margin: 5% auto;
+                
+
+                .bvi-enable {
+                    background-color: #4CAF50;
+                    /* Green */
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 14px;
+
+                }
             }
         }
     }

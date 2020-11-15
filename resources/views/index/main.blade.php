@@ -10,7 +10,6 @@
 @endsection
 
 @push("scripts")
-    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $('.slider').slick({

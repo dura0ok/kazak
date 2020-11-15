@@ -7,6 +7,7 @@
     <title>Городское казачье общество «Ростовское»</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media.css') }}">
+    <link rel="stylesheet" href="{{ asset('bvi/css/bvi.min.css') }}">
     @stack('styles')
 </head>
 
@@ -32,7 +33,11 @@
 
 <!-- End wrapper -->
 </div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('bvi/js/js.cookie.min.js') }}"></script>
+<script src="{{ asset('bvi/js/bvi-init.min.js') }}"></script>
+<script src="{{ asset('bvi/js/bvi.min.js') }}"></script>
+<!-- <script src="{{ asset('js/app.js') }}"></script> -->
 @stack('scripts')
 </body>
 
