@@ -8,6 +8,7 @@
 // Start variables
 $yellow: #ffc600;
 $blue: #065196;
+
 // End variables
 body {
     font-family: "Roboto", sans-serif;
@@ -35,15 +36,29 @@ body {
 }
 
 // fix sidebar styles
-.slick-list { height: 400px !important; }
-.slick-track { display: flex !important; height: 100% !important; }
-.slick-active { height: 100% !important; }
-.slick-active img { height: 100% !important; object-fit: cover !important;}
+.slick-list {
+    height: 400px !important;
+}
+
+.slick-track {
+    display: flex !important;
+    height: 100% !important;
+}
+
+.slick-active {
+    height: 100% !important;
+}
+
+.slick-active img {
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
 // End fix sidebar styles
 
 .wrapper .container {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
     //box-shadow: -10px 0px 20px 0px rgba(200, 200, 200, 0.5), 10px 0px 20px 0px rgba(200, 200, 200, 0.5);
     width: 70%;
     //height: 100%; // Вот это штука отвечает за этот фон контента надо как-то сделать адаптивно под контент
@@ -51,7 +66,7 @@ body {
 
     //header styles
     header {
-        .menu-container{
+        .menu-container {
             position: absolute;
             left: 5px;
             top: 5px;
@@ -59,6 +74,7 @@ body {
             width: 25px;
             display: none;
         }
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -101,7 +117,7 @@ body {
 
     // content
     .content-wrapper {
-    	flex-grow: 1;
+        flex-grow: 1;
         margin-top: 2%;
         display: flex;
         justify-content: space-between;
@@ -519,23 +535,26 @@ body {
                         margin-bottom: 2%;
                         color: white;
                     }
-                    a{
+
+                    a {
                         color: $yellow;
                     }
-                    p{
-                        color: white
 
+                    p {
+                        color: white
                     }
                 }
             }
 
             // End contacts
             // Start statements(Ведомости) OR Documents Документы
-            .statements, .documents {
+            .statements,
+            .documents {
                 margin-left: 5%;
                 margin-top: 5%;
 
-                .state, .document {
+                .state,
+                .document {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
@@ -641,7 +660,7 @@ body {
 
                 .attachments {
                     h1 {
-                    	font-size: 1em;
+                        font-size: 1em;
                         text-align: center;
                         color: yellow;
                         font-weight: lighter;
