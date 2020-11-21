@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="{{ asset('css/media.css') }}">
     <link rel="stylesheet" href="{{ asset('bvi/css/bvi.min.css') }}">
     @stack('styles')
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://xn----dtbbkwczbacrncl.xn--p1ai"/>
+    <meta property="og:site_name" content="ГКО Ростовское || Всевиликое войско донское"/>
+     <meta itemprop="name" content="ГКО Ростовское || Всевиликое войско донское"/>
+    <meta itemprop="description" content="Сайт Донского казачьего войска"/>
+    <meta itemprop="image" content="https://xn----dtbbkwczbacrncl.xn--p1ai/images/logo.png"/>
 </head>
 
 <body>
