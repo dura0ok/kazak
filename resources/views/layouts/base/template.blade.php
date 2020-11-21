@@ -16,6 +16,7 @@
      <meta itemprop="name" content="ГКО Ростовское || Всевиликое войско донское"/>
     <meta itemprop="description" content="Сайт Донского казачьего войска"/>
     <meta itemprop="image" content="https://xn----dtbbkwczbacrncl.xn--p1ai/images/logo.png"/>
+    <meta name="yandex-verification" content="8167a670d07a32a1" />
 </head>
 
 <body>
