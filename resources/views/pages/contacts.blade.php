@@ -4,8 +4,7 @@
     <h1 class="page_title">Контакты</h1>
     <div class="contacts">
         <div class="map">
-            <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae5aac3efb11d1d5db2b1676b24f4488bd66af0a5dc037851126cefe43ef83a5f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab13676a685516957892031893020dc4c164cd6cb94b1af54c4f2ba9bfefa62a5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="contact">
             <h3>Штаб ВКО ВВД</h3>
