@@ -9,22 +9,13 @@
         </div>
         <div class="contact">
             <h3>Штаб ВКО ВВД</h3>
-            <p><b>Адрес: </b> 344050, г.Ростов-на-Дону, пр.Ворошиловский, 12/85-87/13 </p>
-            <p><b>Телефон:</b> 8 863 240 56 17</p>
-            <p><b>E-mail:</b><a href="mailto:shtab_vko_vvd@mail.ru">shtab_vko_vvd@mail.ru</a></p>
+            <p><b>Адрес: </b> Правление городского казачьего общества "Ростовское", 344006<br>
+                Г.Ростов-на-Дону ул. Суворова 28
+             </p>
+            <p><b>Телефон:</b> <a href="tel:263-16-33">263-16-33</a></p>
+            <p><b>E-mail:</b><a href="mailto:gkorostovskoe@yandex.ru">gkorostovskoe@yandex.ru</a></p>
         </div>
-        <div class="contact">
-            <h3>Штаб ВКО ВВД</h3>
-            <p><b>Адрес: </b> 344050, г.Ростов-на-Дону, пр.Ворошиловский, 12/85-87/13 </p>
-            <p><b>Телефон:</b> 8 863 240 56 17</p>
-            <p><b>E-mail:</b><a href="mailto:shtab_vko_vvd@mail.ru">shtab_vko_vvd@mail.ru</a></p>
-        </div>
-        <div class="contact">
-            <h3>Штаб ВКО ВВД</h3>
-            <p><b>Адрес: </b> 344050, г.Ростов-на-Дону, пр.Ворошиловский, 12/85-87/13 </p>
-            <p><b>Телефон:</b> 8 863 240 56 17</p>
-            <p><b>E-mail:</b><a href="mailto:shtab_vko_vvd@mail.ru">shtab_vko_vvd@mail.ru</a></p>
-        </div>
+       
     </div>
 @endsection
 
