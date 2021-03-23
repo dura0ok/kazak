@@ -8,6 +8,7 @@ use App\Models\DocumentCategory;
 use App\Models\Gallery;
 use App\Models\Page;
 use App\Models\Statement;
+use Illuminate\Http\JsonResponse;
 
 class PageController extends Controller
 {
@@ -56,7 +57,8 @@ class PageController extends Controller
         return view('pages.page', ['page' => $page]);
     }
 
-    public function getGallery(){
+    public function getGallery(): JsonResponse
+    {
         $images = Gallery::all();
         $response = ['statusCode' => 200, 'result' => []];
         foreach ($images as $image){
