@@ -20,7 +20,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $news = Article::with('additionalImages')->get();
+        $news = Article::with('additionalImages')->orderByDesc("id")->get();
         return view('admin.news.index', ['news' => $news]);
     }
 
