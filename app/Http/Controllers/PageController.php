@@ -42,7 +42,7 @@ class PageController extends Controller
 
     public function news()
     {
-        $news = Article::all();
+        $news = Article::orderByDesc("id")->get();
         return view('pages.news', ['news' => $news]);
     }
 
